@@ -27,17 +27,17 @@
 <meta property="og:site_name" content="Leo-Cheung の Blog">
 <meta property="og:description" content="IntroductionPreviously, people used to install Gnuradio on Linux. One of the reason (or said the only reason) is that there are lots of OTT (out-of tree) library needed to be complied only in the linu">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/Fig1.png">
-<meta property="og:image" content="http://example.com/images/Fig2.png">
-<meta property="og:image" content="http://example.com/images/Fig3.png">
-<meta property="og:image" content="http://example.com/images/Fig4.png">
-<meta property="og:image" content="http://example.com/images/Fig5.png">
+<meta property="og:image" content="http://example.com/images/Fig1-1.png">
+<meta property="og:image" content="http://example.com/images/Fig1-2.png">
+<meta property="og:image" content="http://example.com/images/Fig1-3.png">
+<meta property="og:image" content="http://example.com/images/Fig1-4.png">
+<meta property="og:image" content="http://example.com/images/Fig1-5.png">
 <meta property="article:published_time" content="2020-10-18T10:40:29.000Z">
-<meta property="article:modified_time" content="2020-10-18T11:59:53.747Z">
+<meta property="article:modified_time" content="2020-10-20T15:13:35.454Z">
 <meta property="article:author" content="Leo">
 <meta property="article:tag" content="Gnuradio">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/Fig1.png">
+<meta name="twitter:image" content="http://example.com/images/Fig1-1.png">
 
 <link rel="canonical" href="http://example.com/2020/10/18/Install-Gnuradio-On-Windows-Using-VM/">
 
@@ -179,10 +179,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-10-18 18:40:29 / Modified: 19:59:53" itemprop="dateCreated datePublished" datetime="2020-10-18T18:40:29+08:00">2020-10-18</time>
+              <time title="Created: 2020-10-18 18:40:29" itemprop="dateCreated datePublished" datetime="2020-10-18T18:40:29+08:00">2020-10-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-10-20 23:13:35" itemprop="dateModified" datetime="2020-10-20T23:13:35+08:00">2020-10-20</time>
+              </span>
 
           
             <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -219,14 +225,14 @@
         <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Previously, people used to install <strong>Gnuradio</strong> on Linux. One of the reason (or said the only reason) is that there are lots of OTT (out-of tree) library needed to be complied only in the linux environment.<br>Although there’re indeed some way to use <strong>USRP</strong> on Windows (for example, we can use <strong>USRP</strong> as Radio IO on Matlab), to use <strong>Gnuradio</strong> &amp; <strong>USRP</strong>, people who used windows before are requested to install a Linux System e.g. ubuntu side by side windows.</p>
 <p>To use <strong>Gnuradio</strong> and <strong>USRP</strong> without install ubuntu side by side windows so that other works running on windows can still continue to work, I follow the way that installing a Ubuntu VM on windows. We skip the part of installing ubuntu VM and focus on how to make the Ubuntu system communicate with the <strong>USRP</strong> plugged on Windows. </p>
 <h2 id="1-Let-the-Windows-find-the-USRP-first"><a href="#1-Let-the-Windows-find-the-USRP-first" class="headerlink" title="1, Let the Windows find the USRP first"></a>1, Let the Windows find the USRP first</h2><p>Supposed we have a <strong>USRP</strong> N210 (with IP address <em>192.168.10.16</em>) plugged on a NIC, we first assign an IP address 192.168.10.2 with subnet mask <em>255.255.255.0</em> as shown in Fig.1. This step is to make the PC stand with N210 in a same subnet <em>192.168.10.x</em>. After that, Windows can PING the N210 as shown in Fig.2</p>
-<p><img src="/images/Fig1.png"></p>
-<p><img src="/images/Fig2.png"></p>
+<p><img src="/images/Fig1-1.png"></p>
+<p><img src="/images/Fig1-2.png"></p>
 <h2 id="2-Configure-the-VM-network"><a href="#2-Configure-the-VM-network" class="headerlink" title="2, Configure the VM network"></a>2, Configure the VM network</h2><p>We configure the second NIC of VM as the way in Fig.3. In short, we turn on the NIC bridging.</p>
-<p><img src="/images/Fig3.png"></p>
+<p><img src="/images/Fig1-3.png"></p>
 <h2 id="3-In-VM-ubuntu-set-the-NIC-with-IP-192-168-10-6"><a href="#3-In-VM-ubuntu-set-the-NIC-with-IP-192-168-10-6" class="headerlink" title="3, In VM ubuntu, set the NIC with IP 192.168.10.6."></a>3, In VM ubuntu, set the NIC with IP <em>192.168.10.6</em>.</h2><p>We can successfully PING the N210 Fig.4</p>
-<p><img src="/images/Fig4.png"></p>
-<h2 id="4-Use-UHD-command-to-find-N210"><a href="#4-Use-UHD-command-to-find-N210" class="headerlink" title="4 Use UHD command to find N210"></a>4 Use UHD command to find N210</h2><p>Type uhd_find_devices, we can find the N210 on Ubuntu as shown in Fig.5. Enjoy it !</p>
-<p><img src="/images/Fig5.png"></p>
+<p><img src="/images/Fig1-4.png"></p>
+<h2 id="4-Use-UHD-command-to-find-N210"><a href="#4-Use-UHD-command-to-find-N210" class="headerlink" title="4 Use UHD command to find N210"></a>4 Use UHD command to find N210</h2><p>Type <code>uhd_find_devices</code>, we can find the N210 on Ubuntu as shown in Fig.5. Enjoy it !</p>
+<p><img src="/images/Fig1-5.png"></p>
 
     </div>
 
@@ -246,8 +252,8 @@
     <div class="post-nav">
       <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/10/18/install-alphapose/" rel="next" title="install alphapose">
-      install alphapose <i class="fa fa-chevron-right"></i>
+    <a href="/2020/10/18/install-alphapose/" rel="next" title="Install Alphapose On Windows">
+      Install Alphapose On Windows <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -366,13 +372,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">1k</span>
+    <span title="Symbols count total">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">1 mins.</span>
+    <span title="Reading time total">2 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
