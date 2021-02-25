@@ -175,7 +175,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-27 00:59:37" itemprop="dateModified" datetime="2020-10-27T00:59:37+08:00">2020-10-27</time>
+                <time title="Modified: 2021-02-26 00:46:57" itemprop="dateModified" datetime="2021-02-26T00:46:57+08:00">2021-02-26</time>
               </span>
 
           <br>
@@ -203,19 +203,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Project-Introduction"><a href="#Project-Introduction" class="headerlink" title="Project Introduction"></a>Project Introduction</h1><p>In my previous blog “Install Alphapose”, we talk about how to install Alphapose on Windows. In this project, we try to make use of Alphapose for some specific applications. Alphapose is to detect multi-persons and further locate and even track the key-points of the human bodies. Most of existing work use alphapose to detection the motion of a person. But in this project, we try to use the key-points generated from Alphapose. In short, we map the key-point to the pose-point in MikuMiku Dance (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/MikuMikuDance">MMD</a>). We skip the introduction of MMD here. And we want to relax the MMD editor and bring out a solution that can automatically convert a human video into a MMD animation.</p>
+          <h1 id="Project-Introduction"><a href="#Project-Introduction" class="headerlink" title="Project Introduction"></a>Project Introduction</h1><p>In my previous blog “Install Alphapose”, we talk about how to install Alphapose on Windows. In this project, we try to make use of Alphapose for some specific applications. Alphapose is to detect multi-persons and further locate and even track the key-points of the human bodies. Most of existing works use Alphapose to detect the motion of a person. But in this project, we try to use the key-points generated from Alphapose. In short, we map the key-point to the pose-point in MikuMiku Dance (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/MikuMikuDance">MMD</a>). We skip the introduction of MMD here. And we want to relax the MMD editor and bring out a solution that can automatically convert a human video into a MMD animation.</p>
 <p><img src="/images/gif1-3.gif"></p>
-<h1 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h1><p>One similar work in Internet is called <a target="_blank" rel="noopener" href="https://github.com/peterljq/OpenMMD">openMMD</a>. But we list several drawbacks of this open-source project as bellows:</p>
+<h1 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h1><p>One similar work that is open source is called <a target="_blank" rel="noopener" href="https://github.com/peterljq/OpenMMD">openMMD</a>. But we list several drawbacks of this open-source project as bellows:</p>
 <ol>
-<li>The conversion from videos of common formats to animations or posetures of 3D models is not open-source. We cannot know how it works and how to further upgrade it.</li>
+<li>The conversion algorithm from videos of common formats to animations or posetures of 3D models is not open-source. Hence, we cannot know how it works and how to further upgrade it.</li>
 <li>It can only support one specified 3D animations models - the Miku model. </li>
 </ol>
 <h1 id="Potential-Challenges"><a href="#Potential-Challenges" class="headerlink" title="Potential Challenges"></a>Potential Challenges</h1><ol>
-<li><p>The output of the <a target="_blank" rel="noopener" href="https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md">AlphaPose</a> are simply 2D location of 16 body keypoints (such as shoulders, arms). The 2D location of a keypoints cannot actually describe a motion. For example, it may not be able to detect a flip=flop action of a arm since the 2D location of the arm is not changed. How to abstract this type of information from these 2D keypoints become a challenge.</p>
+<li><p>The output of the <a target="_blank" rel="noopener" href="https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md">AlphaPose</a> are simply 2D location of 16 body key-points (such as shoulders, arms). The 2D location of the key-points cannot actually describe a motion. For example, it may not be able to detect a flip-flop action of a arm since the 2D location of the arm is not changed. How to abstract this type of information from these 2D key-points become a challenge.</p>
 </li>
-<li><p>From the point of view of the video watcher, the person in the video may walk away from or close to the watcher. Hence, the absolute distance between any two keypoints can be changed. We need to develop a algorithm to capture the “depth” information. </p>
+<li><p>From the video watcher’s point of view, the person in the video may walk away from or close to the watcher. Hence, the absolute distance between any two key-points can be changed. We need to develop a algorithm to capture the “depth” information. </p>
 </li>
-<li><p>16 keypoints information are too coarse to fully illustrate a model. Lots of information such as the motion of fingers are lost. How can we simulate and assign a fake motion to these joint missed in the output of AlphaPose become a next question. </p>
+<li><p>The 16 key-points information are too coarse to fully illustrate a model. Lots of information such as the motion of fingers are lost. How can we simulate and assign a fake motion to these joint missed in the output of AlphaPose become a next question. </p>
 </li>
 </ol>
 <p>Keep going on!</p>
@@ -277,7 +277,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-20 23:16:54" itemprop="dateModified" datetime="2020-10-20T23:16:54+08:00">2020-10-20</time>
+                <time title="Modified: 2021-02-26 00:41:35" itemprop="dateModified" datetime="2021-02-26T00:41:35+08:00">2021-02-26</time>
               </span>
 
           <br>
@@ -286,7 +286,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>641</span>
+              <span>646</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -305,9 +305,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Alphapose is a deep-learning based multi-person pose estimation. In terms of installation, it’s much easier to install Alphapose on Windows comparing to Openpose (another person pose estimation project). To install it:</p>
+          <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Alphapose is a deep-learning based multi-person-pose estimation. In terms of installation, it’s much easier to install Alphapose on Windows compared to Openpose (another person-pose estimation project). To install it:</p>
 <ol>
-<li><p>Install the Anaconda and setup the python environment.<br>I prefer to use python3.5. Running Alphapose with python3.7 may cause some bugs related to Numpy library.</p>
+<li><p>Install Anaconda and setup the python environment.<br>I prefer to use python3.5. Running Alphapose with python3.7 may cause some bugs that are related to Numpy library.</p>
 </li>
 <li><p>Install git on Windows and open a git bash shell</p>
 </li>
@@ -378,7 +378,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-10-20 23:13:35" itemprop="dateModified" datetime="2020-10-20T23:13:35+08:00">2020-10-20</time>
+                <time title="Modified: 2021-02-26 00:47:02" itemprop="dateModified" datetime="2021-02-26T00:47:02+08:00">2021-02-26</time>
               </span>
 
           <br>
@@ -536,7 +536,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2020</span>
+  <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
